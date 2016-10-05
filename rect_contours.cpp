@@ -39,7 +39,7 @@ void thresh_callback(int, void* )
   Mat threshold_output;
   vector<vector<Point> > contours;
   vector<Vec4i> hierarchy;
-  threshold( src_gray, threshold_output, thresh, 255, THRESH_BINARY );  // Detect edges using Threshold
+  threshold( src_gray, threshold_output, thresh, 175, THRESH_BINARY );  // Detect edges using Threshold
   findContours( threshold_output, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, Point(0, 0) );//findContours
   RNG& rng = rng;
   /// Find the rotated rectangles and ellipses for each contour
